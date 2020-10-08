@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrivacyViewController" customModule="XGate" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonHolderView" destination="Do1-C4-vjX" id="F19-Fj-aUz"/>
+                <outlet property="holderView" destination="8yR-sZ-QsE" id="Muo-KG-plj"/>
+                <outlet property="view" destination="lNK-dr-z0x" id="8CZ-eJ-mtL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="lNK-dr-z0x">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.orange" translatesAutoresizingMaskIntoConstraints="NO" id="IRH-zU-Mmx">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="806"/>
+                </imageView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxu-ao-rNX">
+                    <rect key="frame" x="20" y="79" width="88" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="BEQ-m9-Sha"/>
+                    </constraints>
+                    <state key="normal" image="back"/>
+                    <connections>
+                        <action selector="backButtonAction:" destination="-1" eventType="touchUpInside" id="iVk-d1-yC5"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yR-sZ-QsE">
+                    <rect key="frame" x="0.0" y="163" width="414" height="733"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hec-8K-Jpj">
+                            <rect key="frame" x="0.0" y="20" width="414" height="713"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYF-yi-Zfk">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="5027.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Private policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Civ-1F-L6m">
+                                            <rect key="frame" x="10" y="20" width="394" height="34.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34.329999999999998" id="Ffe-Hj-bHG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="28"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eat-wv-7XL">
+                                            <rect key="frame" x="20" y="84.5" width="374" height="4793"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <mutableString key="text">OOO Modul built the X-Gate app as a Commercial app. This SERVICE is provided by OOO Modul and is intended for use as is.
+
+This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.
+
+If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.
+
+The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at X-Gate VPN unless otherwise defined in this Privacy Policy.
+
+X-Gate is committed to protecting your privacy. We want you to understand what information we collect, what we don’t collect, and how we collect, use, and store information. We do not collect logs of your activity, including no logging of browsing history, traffic destination, data content, or DNS queries. We also never store connection logs, meaning no logs of your IP address, your outgoing VPN IP address, connection timestamp, or session duration.
+
+This privacy policy will help you understand how OOO Modul. (“X-Gate",” “we,” “our,” or “us”) collects, uses, and stores information.
+
+General Information
+X-Gate collects two types of information:
+
+(1) Aggregate Apps and VPN connection summary statistics
+X-Gate collects minimal information about usage in order to maintain excellent customer support and quality of service. The section below specifies in detail what information we collect. These statistics never include anything about what the user did with the VPN: no data about the contents or destinations of VPN traffic, no DNS queries, and no IP addresses.
+
+(2) (User-controlled option): Anonymous VPN connection diagnostics and crash reports
+VPN connection diagnostics are anonymized and cannot be tied back to individual VPN X-Gate VPN users. This feature is similar to a “send bug report” option. Users can specify in the settings menu of any X-Gate App whether to send these data to us.
+
+Aggregate Apps and VPN Connection Summary Statistics
+We ensure that we never log browsing history, traffic destination, data content, IP addresses, or DNS queries. Therefore:
+
+The information our servers automatically collect when you access the Application, such as your native actions and conversions that are integral to the Application, as well as interactions with the Application.
+
+We do not know which user was connected to the VPN at a specific time or which VPN server IP addresses they used.
+We do not know the set of original IP addresses of a user’s computer.
+Should anyone try to compel X-Gate to release user information based on any of the above, we cannot supply this information because the data don’t exist.
+
+Successful connection
+We collect information about whether you have successfully established a VPN connection on a particular day (but not a specific time of the day), to which VPN location (but not your assigned outgoing IP address), and from which country/ISP (but not your source IP address). This minimal information assists us in providing technical support, such as identifying connection problems, providing country-specific advice about how to best use our Service, and to enable X-Gate engineers to identify and fix network issues.
+
+Aggregate sum of data transferred (in MB)
+We collect information regarding only the total sum of data transferred by total number of users.
+
+Summary
+We collect minimal usage statistics to maintain our quality of service. Users can’t be uniquely identified as responsible for any specific behavior because his usage pattern overlaps with thousands of other X-Gate.
+
+We’ve engineered our systems to categorically eliminate storage of sensitive data. We may know THAT a customer has used X-Gate, but we can't identificate him and never know HOW they have utilized our Service. We stand by our firm commitment to our customers’ privacy by not possessing any data related to a user’s online activities.
+
+Anonymous VPN Connection Diagnostics and Crash Reports (can be turned off by the user)
+With your permission, we collect anonymized analytics data used for network diagnostics. We use these data in our network operations tools to help optimize network speeds and to let us identify problems related to specific apps, VPN servers, or ISPs. The information we receive is fully anonymized and cannot be tied back to individual X-Gate users (i.e., we do not store which user sent which data, and we do not store IP addresses).
+
+If you opt in to share this information with X-Gate, we will collect the following information:
+
+Speed test data.
+iOS: Firebase Crashlytics, owned by Google, and Apple. See Apple’s Privacy Policy and Firebase’s Privacy and Security documentation. You can disable Apple’s crash reporting in iOS settings as described here.
+Android: Google Analytics and Firebase Crashlytics, owned by Google. See Google Analytics’s Terms of Service and Firebase’s Privacy and Security documentation.
+Upon activation of any X-Gate App, you will be asked if you would like to share these data. You can start or stop sharing these diagnostic data at any time in the App’s settings menu. On iOS, Apple’s crash reporting can be turned off in iOS settings.
+
+Jurisdiction and Applicable Law
+X-Gate’s core mission is to keep your information private.
+
+It is important to note that X-Gate does not collect any IP addresses, browsing history, traffic data, or DNS queries that could be used to identify any specific user.
+
+Storing of Information Related to Email, Live Chat, and Feedback Forms
+X-Gate keeps records of any correspondence, questions, complaints, or compliments you submit to us through our Site or Services, along with our response. Depending on how you contact X-Gate, we may collect your email address and any additional information you provide to us. Having full correspondence records enables our staff to provide the best possible customer support experience.
+
+Security Measures to Protect Your Information
+X-Gate uses best-in-class physical, procedural, and technical security with respect to our offices and information storage facilities so as to prevent any loss, misuse, unauthorized access, disclosure, or modification of information. Access to user information is restricted to staff who require such access to perform their job functions.
+
+While we believe these systems are robust, it is important to understand that no data security measures in the world can offer 100% protection.
+
+Servers are housed in data centers with strong security practices. None of these data centers require us to collect or store any traffic data or personal information related to your use of VPN Services. If any data center were to ask us to log such data, we would immediately cease operations with said data center and find alternative options.
+
+Even if a government were to physically seize one of our VPN servers and manage to break its disk encryption, there would be no logs or information that would tie any individual user to a particular event, website, or behavior.
+
+Cookies
+What is a cookie?
+A cookie is a small text file used to store information about your visit to the Site. Cookies let X-Gate optimize and improve the user experience of the Site by helping us deliver certain functionalities, such as website login and language settings. The cookies we use may vary over time as we continuously update and improve our Site.
+
+Disabling cookies
+You are free to change your cookie preferences at any time. You can do this in the settings panel for your browser. Depending on which browser and device you use, you may be able to control which cookies you allow, which cookies you want to block in the future, and delete cookies. For more information about these settings, please refer to the “help” section of your browser. Note that X-Gate’s Site may not work as intended if you choose to disable cookies.
+
+X-Gate’s cookies
+The cookies set by X-Gate enable us to set your language preference, attribute visitors to a marketing channel, and, once you log in, securely show you information that is specific to your account. The cookies contain a user identifier, but no directly personally identifying information such as your name or email address, and do not track any activity outside of X-Gate’s domains.
+
+Third-party cookies
+X-Gate uses third-party services such as Google Analytics and Adwords. Cookies from such services are used to collect data for statistical reports. For example, we may generate reports regarding the amount of time users spend on the Site and the number of users who visit a particular page.
+
+X-Gate uses Google AdWords remarketing to show advertisements on third-party websites (including Google) to users who have visited our Site. We may show such users advertisements on a Google search results page, or on a site in the Google Display Network.
+
+Third-party vendors, including Google, use cookies to serve ads based on someone’s past visits to the Site. Any data collected will be used in accordance with our Privacy Policy and Google’s privacy policy. Users may opt out of Google’s use of cookies by visiting the Google Advertising Opt-out Page. Users may opt out of Google Analytics by visiting the Google Analytics Opt-out Page. Users may opt out of third-party vendor use of cookies by visiting the Network Advertising Initiative Opt-out Page.
+
+Third-Party Websites
+The Site may contain links to external websites that do not fall under X-Gate's domain. X-Gate is not responsible for the privacy practices or content of such external websites.
+
+Consent and Age Restrictions
+By using the Site, Content, Apps, Software, or Services, you agree to have your information handled as described in our Terms of Service and Privacy Policy.
+
+The Services are intended for adults aged 18 and above. If you believe your child has provided information to us, please let us know immediately.
+
+Users in the European Union
+X-Gate is committed to user privacy globally, and our existing practices reflect that through minimal collection of data and ensuring users have control over their personal information. The General Data Protection Regulation (GDPR) of the European Union (EU) requires us to outline those practices in a specific manner for users in the EU.
+
+In line with the GDPR, we collect and process the data outlined in this Privacy Policy on one of the following bases, depending on the circumstances:
+
+For the purposes of fulfilling our contractual obligations to users, including:
+Providing users with the Services and Apps they have requested.
+Managing user subscriptions and processing payments.
+Providing customer support.
+For a legitimate interest associated with the operation of our business, including:
+Enhancing the quality, reliability, and effectiveness of our Site, Services, and Apps.
+Communicating with customers to provide information and seek feedback related to our Services and Apps.
+With the consent of users, which users can withdraw at any time.
+You can exercise your rights under the GDPR to access, transfer, correct, delete, or object to the processing of your personal information by contacting us at support@trackingtraff.com
+
+Changes to the Privacy Policy
+We may change our Privacy Policy from time to time, without prior notice to you, consistent with applicable privacy laws and principles. Your continued use of the Site or Services constitutes your acceptance of our Privacy Policy.
+
+Contact Us
+If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at support@x-gate.app</mutableString>
+                                            <color key="textColor" red="0.54509803921568623" green="0.58039215686274503" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="eat-wv-7XL" secondAttribute="bottom" constant="150" id="EDk-80-kkU"/>
+                                        <constraint firstItem="Civ-1F-L6m" firstAttribute="leading" secondItem="wYF-yi-Zfk" secondAttribute="leading" constant="10" id="Fji-ZU-le9"/>
+                                        <constraint firstItem="Civ-1F-L6m" firstAttribute="top" secondItem="wYF-yi-Zfk" secondAttribute="top" constant="20" id="Hzc-qu-mGb"/>
+                                        <constraint firstItem="eat-wv-7XL" firstAttribute="leading" secondItem="wYF-yi-Zfk" secondAttribute="leading" constant="20" id="N9s-QN-ffZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="Civ-1F-L6m" secondAttribute="trailing" constant="10" id="O5d-Gg-D90"/>
+                                        <constraint firstItem="eat-wv-7XL" firstAttribute="top" secondItem="Civ-1F-L6m" secondAttribute="bottom" constant="30" id="U1T-3g-ddA"/>
+                                        <constraint firstAttribute="trailing" secondItem="eat-wv-7XL" secondAttribute="trailing" constant="20" id="xg7-rA-wWF"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="wYF-yi-Zfk" firstAttribute="top" secondItem="Hec-8K-Jpj" secondAttribute="top" id="Lkx-v4-MO9"/>
+                                <constraint firstAttribute="bottom" secondItem="wYF-yi-Zfk" secondAttribute="bottom" id="OGD-0A-yCn"/>
+                                <constraint firstItem="wYF-yi-Zfk" firstAttribute="leading" secondItem="Hec-8K-Jpj" secondAttribute="leading" id="Trk-yY-77a"/>
+                                <constraint firstAttribute="trailing" secondItem="wYF-yi-Zfk" secondAttribute="trailing" id="W6S-gF-Msw"/>
+                                <constraint firstItem="wYF-yi-Zfk" firstAttribute="height" secondItem="Hec-8K-Jpj" secondAttribute="height" priority="250" id="mSv-Os-PbD"/>
+                                <constraint firstItem="wYF-yi-Zfk" firstAttribute="centerX" secondItem="Hec-8K-Jpj" secondAttribute="centerX" id="tDq-aS-3jj"/>
+                            </constraints>
+                        </scrollView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do1-C4-vjX">
+                            <rect key="frame" x="0.0" y="603" width="414" height="130"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKt-DE-QYM">
+                                    <rect key="frame" x="20" y="34" width="374" height="62"/>
+                                    <color key="backgroundColor" name="AppOrangeColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="62" id="xOp-Uf-wXR"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                    <state key="normal" title="Accept"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="18"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="startTrialButtonAction:" destination="-1" eventType="touchUpInside" id="taI-Ch-jMa"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="AppGrayColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="qKt-DE-QYM" secondAttribute="trailing" constant="20" id="7qF-Pn-Jh2"/>
+                                <constraint firstAttribute="height" constant="130" id="JJV-wM-Icm"/>
+                                <constraint firstItem="qKt-DE-QYM" firstAttribute="leading" secondItem="Do1-C4-vjX" secondAttribute="leading" constant="20" id="bPz-D2-8t4"/>
+                                <constraint firstItem="qKt-DE-QYM" firstAttribute="centerY" secondItem="Do1-C4-vjX" secondAttribute="centerY" id="bpm-T4-Ed7"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Do1-C4-vjX" secondAttribute="bottom" id="QtN-60-uvv"/>
+                        <constraint firstItem="Do1-C4-vjX" firstAttribute="leading" secondItem="8yR-sZ-QsE" secondAttribute="leading" id="cjM-oL-HN4"/>
+                        <constraint firstAttribute="bottom" secondItem="Hec-8K-Jpj" secondAttribute="bottom" id="fhP-Ys-CA5"/>
+                        <constraint firstAttribute="trailing" secondItem="Hec-8K-Jpj" secondAttribute="trailing" id="kdy-cY-nAY"/>
+                        <constraint firstItem="Hec-8K-Jpj" firstAttribute="top" secondItem="8yR-sZ-QsE" secondAttribute="top" constant="20" id="oEd-pW-vdR"/>
+                        <constraint firstItem="Hec-8K-Jpj" firstAttribute="leading" secondItem="8yR-sZ-QsE" secondAttribute="leading" id="qwZ-p5-MSn"/>
+                        <constraint firstAttribute="trailing" secondItem="Do1-C4-vjX" secondAttribute="trailing" id="yfh-uQ-ept"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hui.znaet" translatesAutoresizingMaskIntoConstraints="NO" id="5J0-a4-3XF">
+                    <rect key="frame" x="51" y="-49" width="312" height="300"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" name="AppOrangeColor"/>
+            <constraints>
+                <constraint firstItem="8yR-sZ-QsE" firstAttribute="top" secondItem="dxu-ao-rNX" secondAttribute="bottom" constant="40" id="2er-Sv-pQi"/>
+                <constraint firstItem="8yR-sZ-QsE" firstAttribute="leading" secondItem="aq8-f9-hnl" secondAttribute="leading" id="5Eo-BC-0w0"/>
+                <constraint firstItem="aq8-f9-hnl" firstAttribute="trailing" secondItem="IRH-zU-Mmx" secondAttribute="trailing" id="GRe-QB-kfz"/>
+                <constraint firstItem="dxu-ao-rNX" firstAttribute="top" secondItem="aq8-f9-hnl" secondAttribute="top" constant="35" id="GgN-Qo-UKH"/>
+                <constraint firstItem="5J0-a4-3XF" firstAttribute="centerX" secondItem="lNK-dr-z0x" secondAttribute="centerX" id="LwQ-L2-Es3"/>
+                <constraint firstItem="dxu-ao-rNX" firstAttribute="leading" secondItem="aq8-f9-hnl" secondAttribute="leading" constant="20" id="TxN-vZ-HpO"/>
+                <constraint firstItem="8yR-sZ-QsE" firstAttribute="trailing" secondItem="aq8-f9-hnl" secondAttribute="trailing" id="V3j-oa-XeH"/>
+                <constraint firstItem="IRH-zU-Mmx" firstAttribute="top" secondItem="lNK-dr-z0x" secondAttribute="top" id="bmM-ux-vyO"/>
+                <constraint firstItem="IRH-zU-Mmx" firstAttribute="leading" secondItem="aq8-f9-hnl" secondAttribute="leading" id="d5A-Sg-WHW"/>
+                <constraint firstItem="5J0-a4-3XF" firstAttribute="centerY" secondItem="dxu-ao-rNX" secondAttribute="centerY" id="ssi-84-eTW"/>
+                <constraint firstAttribute="bottom" secondItem="8yR-sZ-QsE" secondAttribute="bottom" id="y8Y-sY-RWB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="aq8-f9-hnl"/>
+            <point key="canvasLocation" x="136.23188405797103" y="137.94642857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="44" height="44"/>
+        <image name="background.orange" width="375" height="403"/>
+        <image name="hui.znaet" width="156" height="150"/>
+        <namedColor name="AppGrayColor">
+            <color red="0.88999998569488525" green="0.9100000262260437" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppOrangeColor">
+            <color red="0.95300000905990601" green="0.41600000858306885" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
