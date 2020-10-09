@@ -33,7 +33,7 @@ class AlertController: UIAlertController {
     func setTitleImage(_ image: UIImage?) {
         guard let imageView = self.imageView else {
             
-            let resized = image?.resize(maxHeight: 200, maxWidth: Float(view.bounds.width - 105))
+            let resized = image?.resize(maxHeight: 200, maxWidth: 200)
             let imageView = UIImageView(image: image)
             imageView.frame.size = resized!
             self.view.addSubview(imageView)

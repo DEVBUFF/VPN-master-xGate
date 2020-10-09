@@ -121,7 +121,7 @@ extension ViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(statusDidChange(_:)), name: NSNotification.Name("kUpdateUIWithStatus"), object: nil)
         
-        if settings.needAcceptTerms {
+        if settings.needAcceptTerms && !settings.wasFunnel {
             let vc = PrivacyViewController(nibName: "PrivacyViewController",
                                            bundle: nil)
             vc.showOnboarding = showOnboardingIfNeeded
