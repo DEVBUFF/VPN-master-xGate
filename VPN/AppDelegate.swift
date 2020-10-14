@@ -26,9 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        // window?.rootViewController = LaunchViewController(nibName: "LaunchViewController", bundle: nil)
         
-        if !settings.wasFunnel {
+        if settings.wasFunnel == false {
             showLaunch()
-        } else {
+            
+        } else if settings.wasFunnel == true {
             openFunnel()
         }
         

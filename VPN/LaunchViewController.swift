@@ -33,6 +33,7 @@ class LaunchViewController: UIViewController {
         if let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as? ViewController {
             let nc = UINavigationController(rootViewController: mainVC)
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                guard !settings.wasFunnel else { return }
                  UIApplication.shared.keyWindow?.rootViewController = nc
             }
         }
