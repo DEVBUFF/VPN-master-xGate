@@ -30,7 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             showLaunch()
             
         } else if settings.wasFunnel == true {
-            openFunnel()
+            fetchRemoteConfig {
+                self.openFunnel()
+            }
+            
         }
         
         //IAP
@@ -38,7 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Firebase
         FirebaseApp.configure()
-        fetchRemoteConfig()
         
         return true
     }
@@ -66,16 +68,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
-    func fetchRemoteConfig() {
+    func fetchRemoteConfig(completion: @escaping ()->()) {
         RemoteConfig.remoteConfig().fetch(withExpirationDuration: 0) { [unowned self] (status, error) in
             if error == nil {
                 print("status  \(status.rawValue)")
                 RemoteConfig.remoteConfig().activate { (error) in
                     print("aactivate error \(error?.localizedDescription ?? "")")
-                    
+                    completion()
                 }
             } else {
-                
+                completion()
                 print(error?.localizedDescription ?? "")
             }
         }
@@ -110,7 +112,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
 //            self.mainScreenVC = nil
 //            self.instructionsVC = nil
-            self.openFunnel()
+            fetchRemoteConfig {
+                self.openFunnel()
+            }
             
         }
         
