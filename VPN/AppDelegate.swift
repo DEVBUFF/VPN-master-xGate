@@ -24,14 +24,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         
-       // window?.rootViewController = LaunchViewController(nibName: "LaunchViewController", bundle: nil)
+        window?.rootViewController = LaunchViewController(nibName: "LaunchViewController", bundle: nil)
+        
+        //Firebase
+        FirebaseApp.configure()
         
         if settings.wasFunnel == false {
             showLaunch()
             
         } else if settings.wasFunnel == true {
             fetchRemoteConfig {
-                self.openFunnel()
+                DispatchQueue.main.async { [weak self] in
+                    guard let `self` = self else { return }
+                    self.openFunnel()
+                }
+               
             }
             
         }
@@ -39,8 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //IAP
         IAPManager.shared.loadProducts()
         
-        //Firebase
-        FirebaseApp.configure()
+        
         
         return true
     }
@@ -113,7 +119,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            self.mainScreenVC = nil
 //            self.instructionsVC = nil
             fetchRemoteConfig {
-                self.openFunnel()
+                DispatchQueue.main.async { [weak self] in
+                    guard let `self` = self else { return }
+                    self.openFunnel()
+                }
             }
             
         }

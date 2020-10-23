@@ -33,12 +33,37 @@ class LaunchViewController: UIViewController {
         if let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as? ViewController {
             let nc = UINavigationController(rootViewController: mainVC)
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                guard !settings.wasFunnel else { return }
+                guard !settings.wasFunnel else {
+//                    DispatchQueue.main.async { [weak self] in
+//                        guard let `self` = self else { return }
+//                        self.openFunnel()
+//                    }
+                   
+                    return
+                }
                  UIApplication.shared.keyWindow?.rootViewController = nc
             }
         }
         
     }
 
+    func openFunnel() {
+        switch settings.funnelType {
+        case .malware1:
+            let mainScreenVC = CheckConnectionViewController(nibName: "CheckConnectionViewController", bundle: nil)
+            let nc = UINavigationController(rootViewController: mainScreenVC)
+            UIApplication.shared.keyWindow?.rootViewController = nc
+            
+        case .malware2:
+            let mainScreenVC = CheckConnectionLocationViewController(nibName: "CheckConnectionLocationViewController", bundle: nil)
+            let nc = UINavigationController(rootViewController: mainScreenVC)
+            UIApplication.shared.keyWindow?.rootViewController = nc
+            
+        default:
+            print("nothing")
+            
+        }
+        
+    }
 
 }
