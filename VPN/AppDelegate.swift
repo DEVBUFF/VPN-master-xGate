@@ -42,6 +42,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
         }
+        if settings.didFirstLoad {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { [unowned self] in
+                self.sendPostBack()
+            }
+        }
+        
         
         //IAP
         IAPManager.shared.loadProducts()

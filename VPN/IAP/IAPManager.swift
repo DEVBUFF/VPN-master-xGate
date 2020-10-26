@@ -8,7 +8,7 @@
 
 import StoreKit
 import TPInAppReceipt
-//import Firebase
+import Firebase
 
 
 typealias ProductType = IAPManager.ProductType
@@ -99,7 +99,7 @@ extension IAPManager: SKPaymentTransactionObserver {
                 self.isSubscriptionAvailable = true
                 self.delegate?.inAppLoadingSucceded(productType: productType)
                // Analytics.logEvent("bought_\(productType.rawValue)", parameters: [:])
-                //self.sendPostBack()
+                self.sendPostBack()
             case .failed:
                 if let transactionError = transaction.error as NSError?,
                     transactionError.code != SKError.paymentCancelled.rawValue {
@@ -115,7 +115,7 @@ extension IAPManager: SKPaymentTransactionObserver {
                 self.isSubscriptionAvailable = true
                 self.delegate?.inAppLoadingSucceded(productType: productType)
                 //Analytics.logEvent("restored_\(productType.rawValue)", parameters: [:])
-                //self.sendPostBack()
+                self.sendPostBack()
             case .deferred:
                 self.delegate?.inAppLoadingSucceded(productType: productType)
             @unknown default:
@@ -125,16 +125,16 @@ extension IAPManager: SKPaymentTransactionObserver {
     }
     
     func sendPostBack() {
-//        guard let subid = settings.funnelSUBID, subid != "{subid}" else { return }
-//        let postbackLink = RemoteConfig.remoteConfig().configValue(forKey: "postback_link").stringValue ?? ""
-//        let url = URL(string: postbackLink + "?subid=\(subid)&revenue=1")!
-//
-//        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-//            guard let data = data else { return }
-//            print(String(data: data, encoding: .utf8)!)
-//        }
-//
-//        task.resume()
+        guard let subid = settings.funnelSUBID, subid != "{subid}" else { return }
+        let postbackLink = RemoteConfig.remoteConfig().configValue(forKey: "postback_link").stringValue ?? ""
+        let url = URL(string: postbackLink + "?subid=\(subid)&revenue=1")!
+
+        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+            guard let data = data else { return }
+            print(String(data: data, encoding: .utf8)!)
+        }
+
+        task.resume()
     }
     
 }
